@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Магазин</title>
+    <link href="css/normalize-min.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="inner-page">
+        <main class="wrap">
+
+            <!--breadcrumbs-->
+            <div class="inner-page__container">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html">Каталог товаров</a></li>
+                    <li class="breadcrumbs__current">Воздушные шары</li>
+                </ul>
+
+                <h1 class="page-title">Каталог шариков</h1>
+            </div>
+
+            <!--filters-->
+            <section class="filters">
+                <h2 class="visually-hidden">Фильтр товаров</h2>
+
+                <form class="filter" method="get" action="/">
+
+                    <div class="filter__fieldset">
+                        <span class="filter__legend">Цвет:</span>
+
+                        <ul class="filter__list filter__color-list">
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group" value="colorful-balls" id="filter-red">
+
+                                <label for="filter-red"><span class="visually-hidden">Красный</span></label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group" value="colorful-balls" id="filter-black" checked>
+
+                                <label for="filter-black"><span class="visually-hidden">Черный</span></label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group" value="colorful-balls" id="filter-yellow">
+
+                                <label for="filter-yellow"><span class="visually-hidden">Желтый</span></label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group" value="colorful-balls" id="filter-white">
+
+                                <label for="filter-white"><span class="visually-hidden">Белый</span></label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group" value="colorful-balls" id="filter-green">
+
+                                <label for="filter-green"><span class="visually-hidden">Зеленый</span></label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group" value="colorful-balls" id="filter-fuchsia">
+
+                                <label for="filter-fuchsia"><span class="visually-hidden">Фуксия</span></label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group" value="colorful-balls" id="filter-orange">
+
+                                <label for="filter-orange"><span class="visually-hidden">Оранжевый</span></label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter__fieldset filter__quantity">
+                        <span class="visually-hidden">Количество</span>
+
+                        <ul class="filter__list filter__quantity-list">
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-checkbox" type="checkbox" name="all-balls" id="filter-all-balls">
+                                <label for="filter-all-balls">Все шары</label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-checkbox" type="checkbox" name="sets" id="filter-sets" checked>
+                                <label for="filter-sets">Комплекты</label>
+                            </li>
+                            <li class="filter__option">
+                                <input class="visually-hidden filter__input filter__input-checkbox" type="checkbox" name="piece" id="filter-piece">
+                                <label for="filter-piece">По одному</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter__fieldset filter__price">
+                        <span class="filter__legend">Сортировать по:</span>
+
+                        <ul class="filter__list filter__price-list">
+                            <li class="filter__option">
+                                <span class="filter__price-text">Цене</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </form>
+            </section>
+
+            <!--catalog-->
+            <section class="catalog">
+                <h2 class="visually-hidden">Список шаров</h2>
+
+                <ul class="catalog-list">
+
+                    <!--catalog__item-->
+                    <li class="catalog__item">
+                        <a class="catalog-item__image" href="catalog-item.html">
+                            <img src="img/product-1.png" width="131" height="130" alt="Шар «Звезды и Кометы»">
+                        </a>
+                        <div class="catalog-item__content">
+                            <h3 class="catalog-item__title">
+                                <a href="catalog-item.html">
+                                    Шары «Звезды и Кометы»
+                                </a>
+                            </h3>
+                            <p class="catalog-item__description">
+                                Фигуры, латексный, полупрозрачный, средний, красный
+                            </p>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__pieces">
+                                <p>
+                                    <b class="pieces__price">75 Р</b><span class="pieces__price-one">/ шт.</span>
+                                </p>
+                                <p class="pieces__oldprice">90 Р</p>
+                            </div>
+                            <div class="catalog-item__quantity">
+                                <div class="quantity">
+                                    <input class="enter-quantity" type="number" name="enter-quantity" value="" placeholder="200 шт." min="0" max="1000" aria-label="Введите желаемое количество шаров">
+
+                                    <div class="quantity__buttons">
+                                        <button aria-label="Уменьшить количество шаров">
+                                            <span class="button-plus"></span>
+                                        </button>
+                                        <button aria-label="Увеличить количество шаров">
+                                            <span class="button-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="buy" href="#" title="Купить" aria-label="Купить"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--catalog__item-->
+                    <li class="catalog__item">
+                        <a class="catalog-item__image" href="catalog-item.html">
+                            <img src="img/product-2.png" width="131" height="130" alt="Шар «Звезды и Кометы»">
+                        </a>
+                        <div class="catalog-item__content">
+                            <h3 class="catalog-item__title">
+                                <a href="catalog-item.html">
+                                    Шары «Звезды и Кометы»
+                                </a>
+                            </h3>
+                            <p class="catalog-item__description">
+                                Фигуры, латексный
+                            </p>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__pieces">
+                                <p>
+                                    <b class="pieces__price">15 075 Р</b><span class="pieces__price-one">/ шт.</span>
+                                </p>
+                                <p class="pieces__oldprice">90 Р</p>
+                            </div>
+                            <div class="catalog-item__quantity">
+                                <div class="quantity">
+                                    <input class="enter-quantity" type="number" name="enter-quantity" value="" placeholder="2 шт." min="0" max="1000" aria-label="Введите желаемое количество шаров">
+
+                                    <div class="quantity__buttons">
+                                        <button aria-label="Уменьшить количество шаров">
+                                            <span class="button-plus"></span>
+                                        </button>
+                                        <button aria-label="Увеличить количество шаров">
+                                            <span class="button-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="buy" href="#" title="Купить" aria-label="Купить"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--catalog__item-->
+                    <li class="catalog__item">
+                        <a class="catalog-item__image" href="catalog-item.html">
+                            <img src="img/product-1.png" width="131" height="130" alt="Шар «Звезды и Кометы»">
+                        </a>
+                        <div class="catalog-item__content">
+                            <h3 class="catalog-item__title">
+                                <a href="catalog-item.html">
+                                    Шары «Звезды»
+                                </a>
+                            </h3>
+                            <p class="catalog-item__description">
+                                Фигуры, латексный, полупрозрачный, средний, красный
+                            </p>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__pieces">
+                                <p>
+                                    <b class="pieces__price">75 Р</b><span class="pieces__price-one">/ шт.</span>
+                                </p>
+                                <p class="pieces__oldprice">90 Р</p>
+                            </div>
+                            <div class="catalog-item__quantity">
+                                <div class="quantity">
+                                    <input class="enter-quantity" type="number" name="enter-quantity" value="" placeholder="200 шт." min="0" max="1000" aria-label="Введите желаемое количество шаров">
+
+                                    <div class="quantity__buttons">
+                                        <button aria-label="Уменьшить количество шаров">
+                                            <span class="button-plus"></span>
+                                        </button>
+                                        <button aria-label="Увеличить количество шаров">
+                                            <span class="button-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="buy" href="#" title="Купить" aria-label="Купить"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--catalog__item-->
+                    <li class="catalog__item">
+                        <a class="catalog-item__image" href="catalog-item.html">
+                            <img src="img/product-2.png" width="131" height="130" alt="Шар «Звезды и Кометы»">
+                        </a>
+                        <div class="catalog-item__content">
+                            <h3 class="catalog-item__title">
+                                <a href="catalog-item.html">
+                                    Шары «Звезды и Кометы»
+                                </a>
+                            </h3>
+                            <p class="catalog-item__description">
+                                Фигуры, латексный, полупрозрачный, средний, красный
+                            </p>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__pieces">
+                                <p>
+                                    <b class="pieces__price">15 075 Р</b><span class="pieces__price-one">/ шт.</span>
+                                </p>
+                                <p class="pieces__oldprice">90 Р</p>
+                            </div>
+                            <div class="catalog-item__quantity">
+                                <div class="quantity">
+                                    <input class="enter-quantity" type="number" name="enter-quantity" value="" placeholder="2 шт." min="0" max="1000" aria-label="Введите желаемое количество шаров">
+
+                                    <div class="quantity__buttons">
+                                        <button aria-label="Уменьшить количество шаров">
+                                            <span class="button-plus"></span>
+                                        </button>
+                                        <button aria-label="Увеличить количество шаров">
+                                            <span class="button-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="buy" href="#" title="Купить" aria-label="Купить"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--catalog__item-->
+                    <li class="catalog__item">
+                        <a class="catalog-item__image" href="catalog-item.html">
+                            <img src="img/product-2.png" width="131" height="130" alt="Шар «Звезды и Кометы»">
+                        </a>
+                        <div class="catalog-item__content">
+                            <h3 class="catalog-item__title">
+                                <a href="catalog-item.html">
+                                    Шары «Звезды»
+                                </a>
+                            </h3>
+                            <p class="catalog-item__description">
+                                Фигуры, латексный, полупрозрачный
+                            </p>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__pieces">
+                                <p>
+                                    <b class="pieces__price">15 075 Р</b><span class="pieces__price-one">/ шт.</span>
+                                </p>
+                                <p class="pieces__oldprice">90 Р</p>
+                            </div>
+                            <div class="catalog-item__quantity">
+                                <div class="quantity">
+                                    <input class="enter-quantity" type="number" name="enter-quantity" value="" placeholder="2 шт." min="0" max="1000" aria-label="Введите желаемое количество шаров">
+
+                                    <div class="quantity__buttons">
+                                        <button aria-label="Уменьшить количество шаров">
+                                            <span class="button-plus"></span>
+                                        </button>
+                                        <button aria-label="Увеличить количество шаров">
+                                            <span class="button-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="buy" href="#" title="Купить" aria-label="Купить"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--catalog__item-->
+                    <li class="catalog__item">
+                        <a class="catalog-item__image" href="catalog-item.html">
+                            <img src="img/product-2.png" width="131" height="130" alt="Шар «Звезды и Кометы»">
+                        </a>
+                        <div class="catalog-item__content">
+                            <h3 class="catalog-item__title">
+                                <a href="catalog-item.html">
+                                    Шары «Звезды»
+                                </a>
+                            </h3>
+                            <p class="catalog-item__description">
+                                Фигуры, латексный, полупрозрачный
+                            </p>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__pieces">
+                                <p>
+                                    <b class="pieces__price">15 075 Р</b><span class="pieces__price-one">/ шт.</span>
+                                </p>
+                                <p class="pieces__oldprice">90 Р</p>
+                            </div>
+                            <div class="catalog-item__quantity">
+                                <div class="quantity">
+                                    <input class="enter-quantity" type="number" name="enter-quantity" value="" placeholder="2 шт." min="0" max="1000" aria-label="Введите желаемое количество шаров">
+
+                                    <div class="quantity__buttons">
+                                        <button aria-label="Уменьшить количество шаров">
+                                            <span class="button-plus"></span>
+                                        </button>
+                                        <button aria-label="Увеличить количество шаров">
+                                            <span class="button-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="buy" href="#" title="Купить" aria-label="Купить"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--catalog__item-->
+                    <li class="catalog__item">
+                        <a class="catalog-item__image" href="catalog-item.html">
+                            <img src="img/product-1.png" width="131" height="130" alt="Шар «Звезды и Кометы»">
+                        </a>
+                        <div class="catalog-item__content">
+                            <h3 class="catalog-item__title">
+                                <a href="catalog-item.html">
+                                    Фигуры, латексный
+                                </a>
+                            </h3>
+                            <p class="catalog-item__description">
+                                Фигуры, латексный
+                            </p>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__pieces">
+                                <p>
+                                    <b class="pieces__price">75 Р</b><span class="pieces__price-one">/ шт.</span>
+                                </p>
+                                <p class="pieces__oldprice">90 Р</p>
+                            </div>
+                            <div class="catalog-item__quantity">
+                                <div class="quantity">
+                                    <input class="enter-quantity" type="number" name="enter-quantity" value="" placeholder="200 шт." min="0" max="1000" aria-label="Введите желаемое количество шаров">
+
+                                    <div class="quantity__buttons">
+                                        <button aria-label="Уменьшить количество шаров">
+                                            <span class="button-plus"></span>
+                                        </button>
+                                        <button aria-label="Увеличить количество шаров">
+                                            <span class="button-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="buy" href="#" title="Купить" aria-label="Купить"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!--pagination-->
+                <div class="pagination">
+                    <a href="#" class="pagination__item pagination__prew">Назад</a>
+
+                    <ul class="pagination-list">
+                        <li class="pagination__item"><a href="#">1</a></li>
+                        <li class="pagination__item"><a>2</a></li>
+                        <li class="pagination__item pagination__item-current"><a href="#">3</a></li>
+                        <li class="pagination__item"><a href="#">4</a></li>
+                        <li class="pagination__item"><a href="#">...</a></li>
+                        <li class="pagination__item"><a href="#">5</a></li>
+                        <li class="pagination__item"><a href="#">6</a></li>
+                        <li class="pagination__item"><a href="#">7</a></li>
+                        <li class="pagination__item"><a href="#">8</a></li>
+                    </ul>
+
+                    <a href="#" class="pagination__item pagination__next">Далее</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>
